@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/style.css">
     <title>Decodificador de Texto</title>
 </head>
 <body>
-    <header>
-        <section class="cabecalho">
-            <img class="cabecalho__logo" src="./src/assets/img/logo.png" alt="Logo Alura">
+    <header class="cabecalho">
+        <section class="cabecalho__container">
+            <img class="cabecalho__container-logo" src="./src/assets/img/logo.png" alt="Logo Alura">
         </section>
     </header>
-    <main>
-        <div>
-            <input type="text" placeholder="Digite seu texto">
-            <p>Apenas letras minúsculas e sem acento.</p>
-            <div>
-                <a href="">Criptografar</a>
-                <a href="">Descriptografar</a>
+    <main class="principal">
+        <div class="principal__criptografar">
+            <input type="text" placeholder="Digite seu texto" width="60rem" height="35rem">
+            <div class="principal__criptografar__container">
+                <p class="principal__criptografar__container-texto"><img class="icone__exclamation" src="./src/assets/img/circle-exclamation-solid.svg"/> Apenas letras minúsculas e sem acento.</p>
+                <div class="principal__criptografar__container-botao">
+                    <button onclick="criptografarTexto()" id="criptografar" class="principal__criptografar__container-botao-config crip">Criptografar</a>
+                    <button onclick="descriptografarTexto()" id="descriptografar" class="principal__criptografar__container-botao-config descrip">Descriptografar</a>
+                </div>
             </div>
         </div>
-        <div>
-            <img src="./src/assets/img/Figura_menino.svg" alt="">
-            <p>Nenhuma mensagem encontrada</p>
-            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <div class="principal__quadro">
+            <img class="principal__quadro-imagem" src="./src/assets/img/Figura_menino.svg" alt="">
+            <p class="principal__quadro-titulo">Nenhuma mensagem encontrada</p>
+            <p class="principal__quadro-subtitulo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <button onclick="copiarTexto()" id="copiar" class="principal__quadro-botao" disabled>Copiar</button>
         </div>
     </main>
-    <footer>
+    <footer class="rodape">
         <p>Challenge ONE</p>
         <p>Desenvolvido por Isnar Silva</p>
     </footer>
