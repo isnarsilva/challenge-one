@@ -36,6 +36,7 @@ body {
     color: #192841;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    text-transform: lowercase;
 }
 
 .principal__criptografar input::placeholder {
@@ -65,14 +66,29 @@ body {
     background-color: #ffffff;
     margin: 1.5rem;
     border-radius: 16px;
+
 }
 
-.principal__quadro img {
+.principal__quadro-textoEncriptado {
+    font-size: 24px;
+    color: #192841;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    width: 90%;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#quadro-imagem {
     padding: 10rem 0 5rem 0;
     width: 80%;
 }
 
-.principal__quadro-titulo {
+#quadro-titulo {
     color: #3c3c3c;
     font-size: 18px;
     font-weight: 700;
@@ -81,7 +97,7 @@ body {
     text-align: center;
 }
 
-.principal__quadro-subtitulo {
+#quadro-subtitulo {
     color: #8c8c8c;
     font-size: 14px;
     font-family: 400;
@@ -90,9 +106,9 @@ body {
     text-align: center;
 }
 
-.principal__quadro-botao {
+#quadro-botao {
     display: none;
-    margin: 5rem 1rem 1.5rem 1rem;
+    margin: 5rem 1rem 2.5rem 1rem;
     border: 1px solid #192841;
     text-decoration: none;
     text-transform: none;
@@ -100,7 +116,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     border-radius: 30px;
-    padding: 1.5rem 6rem;
+    padding: 1rem 6rem;
     background-color: #ffffff;
 }
 
@@ -123,7 +139,7 @@ body {
     justify-content: flex-start;
     text-decoration: none;
     text-transform: none;
-    font-size: 1rem;
+    /* font-size: 24px; */
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     margin: 1rem 1rem 1rem 0;
@@ -135,6 +151,7 @@ body {
     padding: 1.5rem 6rem;
     border-radius: 30px;
     text-decoration: none;
+    font-size: 16px;
 }
 
 .crip {
