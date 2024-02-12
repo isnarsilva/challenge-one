@@ -65,5 +65,39 @@ function limpaQuadro() {
      
 }
 
+function descriptografarTexto() {
+    // Obtém o texto a ser Descriptografado
+    let textoDesencriptar = document.getElementById('textoCriptografar').value.toLowerCase();
 
+    // Define um objeto de mapeamento para as substituições
+    const substituicoes = {
+        'ai': 'a',
+        'enter': 'e',
+        'imes': 'i',
+        'ober': 'o',
+        'ufer': 'u'
+    };
+
+    // Usa expressões regulares para encontrar e substituir as sequências correspondentes
+    textoDescriptografado = textoDesencriptar.replace(/ai|enter|imes|ober|ufer/g, match => substituicoes[match]);
+
+    var botaoQuadro = document.getElementById('quadro-botao');
+    var organizaQuadro = document.getElementsByClassName('principal__quadro')
+
+    limpaQuadro();
+
+    botaoQuadro.style.display = 'block';
+
+    for (var i = 0; i < organizaQuadro.length; i++) {
+        organizaQuadro[i].style.justifyContent = 'space-between';
+    }
+    
+
+    document.getElementById('textoCriptografado').innerHTML = `<p class='principal__quadro-textoEncriptado'>${textoDescriptografado}<p>`;
+    
+}
+
+function copiarTexto() {
+    
+}
 
