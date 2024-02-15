@@ -118,6 +118,8 @@ body {
     border-radius: 30px;
     padding: 1rem 6rem;
     background-color: #ffffff;
+    position: relative;
+    cursor: pointer;
 }
 
 .principal__criptografar__container {
@@ -152,6 +154,7 @@ body {
     border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .crip {

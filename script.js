@@ -1,3 +1,5 @@
+ // Variável para armazenar o texto criptografado
+ let textoEncriptado = "";
 
 
 function criptografarTexto() {
@@ -5,8 +7,8 @@ function criptografarTexto() {
     let textoEncriptar = document.getElementById('textoCriptografar').value.toLowerCase();
     
     
-    // Variável para armazenar o texto criptografado
-    let textoEncriptado = "";
+    //Variável para armazenar o texto criptografado
+    textoEncriptado = "";
 
     // Loop para percorrer cada letra do texto
     for (let i = 0; i < textoEncriptar.length; i++) {
@@ -46,7 +48,7 @@ function criptografarTexto() {
     }
 
 
-    document.getElementById('textoCriptografado').innerHTML = `<p class='principal__quadro-textoEncriptado'>${textoEncriptado}<p>`;
+    document.getElementById('textoCriptografado').innerHTML = `<p class='principal__quadro-textoEncriptado id=textoDescriptado'>${textoEncriptado}<p>`;
 
 
 }
@@ -79,7 +81,7 @@ function descriptografarTexto() {
     };
 
     // Usa expressões regulares para encontrar e substituir as sequências correspondentes
-    textoDescriptografado = textoDesencriptar.replace(/ai|enter|imes|ober|ufer/g, match => substituicoes[match]);
+    let textoDescriptografado = textoDesencriptar.replace(/ai|enter|imes|ober|ufer/g, match => substituicoes[match]);
 
     var botaoQuadro = document.getElementById('quadro-botao');
     var organizaQuadro = document.getElementsByClassName('principal__quadro')
@@ -93,11 +95,15 @@ function descriptografarTexto() {
     }
     
 
-    document.getElementById('textoCriptografado').innerHTML = `<p class='principal__quadro-textoEncriptado'>${textoDescriptografado}<p>`;
+    document.getElementById('textoCriptografado').innerHTML = `<p class='principal__quadro-textoEncriptado id="copiaTexto"'>${textoDescriptografado}<p>`;
     
 }
 
 function copiarTexto() {
-    
+    areaTransferencia(textoEncriptado);
+}
+
+function areaTransferencia(texto) {
+    navigator.clipboard.writeText(texto);
 }
 
