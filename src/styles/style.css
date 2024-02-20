@@ -25,11 +25,12 @@ body {
     height: 80vh;
 }
 
-.principal__criptografar input {
+#textoCriptografar {
     border: none;
+    outline: none;
     background-color: #E5E5E5;
-    /* width: 60rem;
-    height: 35rem; */
+    width: 90%;
+    height: 65vh;
     vertical-align: text-top;
     line-height: 1;
     font-size: 32px;
@@ -37,9 +38,13 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-transform: lowercase;
+    text-align: justify;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 0;
 }
 
-.principal__criptografar input::placeholder {
+#textoCriptografar::placeholder {
     font-size: 32px;
     color: #192841;
     font-family: 'Inter', sans-serif;
@@ -116,10 +121,11 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     border-radius: 30px;
-    padding: 1rem 6rem;
     background-color: #ffffff;
     position: relative;
     cursor: pointer;
+    width: 70%;
+    height: 7vh;
 }
 
 .principal__criptografar__container {
@@ -141,7 +147,6 @@ body {
     justify-content: flex-start;
     text-decoration: none;
     text-transform: none;
-    /* font-size: 24px; */
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     margin: 1rem 1rem 1rem 0;
@@ -150,11 +155,12 @@ body {
 
 .principal__criptografar__container-botao-config {
     border: 1px solid #192841;
-    padding: 1.5rem 6rem;
     border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
+    width: 35%;
+    height: 7vh;
 }
 
 .crip {
@@ -176,4 +182,96 @@ body {
     align-items: center;
     text-align: center;
     color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 1rem;
+    }
+
+    .cabecalho__container {
+        padding: 1rem 0;
+    }
+
+    
+    .principal__criptografar {
+        width: 100%;
+        margin: 1rem;
+    }
+    
+    .principal__quadro {
+        margin: 1rem;
+        position: relative;
+        width: 95%;
+        height: auto;
+    }
+
+    #textoCriptografar {
+        font-size: 24px;
+    }
+
+    #textoCriptografar::placeholder {
+        font-size: 24px;
+    }
+    
+    #quadro-imagem {
+        display: none;
+    }
+
+    .principal__quadro-textoEncriptado {
+        padding: 1rem;
+        width: 90%;
+        height: auto;
+        position: relative;
+    }
+
+    .principal__quadro-subtitulo {
+        margin-bottom: 2rem;
+    }
+
+    .principal__criptografar__container-botao-config {
+        padding: 0;
+        width: 100%;
+        height: 7vh;
+    }
+
+    #quadro-botao {
+        padding: 0;
+        width: 90%;
+        height: 7vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .principal__criptografar {
+        height: 60vh;
+    }
+    
+    #textoCriptografar {
+        font-size: 16px;
+        width: 90%;
+        height: 40vh;
+    }
+
+    #textoCriptografar::placeholder {
+        font-size: 16px;
+    }
+
+    .principal__quadro-textoEncriptado {
+        font-size: 16px;
+        font-weight: 700;
+
+    }
+
+    .principal__criptografar__container-botao {
+        display: block;
+    }
+
+    .crip {
+        margin-bottom: 1rem;
+    }
+
+    #quadro-botao {
+        margin: 1.5rem 1rem;
+    }
 }

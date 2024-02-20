@@ -29,7 +29,7 @@ function criptografarTexto() {
             textoEncriptado += 'ober';
         } else if (letraAtual === 'u') {
             // Substitui a letra 'u' por 'ufer'
-            textoEncriptado += 'ufer';
+            textoEncriptado += 'ufat';
         } else {
             // Adiciona a letra original ao texto criptografado
             textoEncriptado += letraAtual;
@@ -77,11 +77,11 @@ function descriptografarTexto() {
         'enter': 'e',
         'imes': 'i',
         'ober': 'o',
-        'ufer': 'u'
+        'ufat': 'u'
     };
 
     // Usa expressões regulares para encontrar e substituir as sequências correspondentes
-    let textoDescriptografado = textoDesencriptar.replace(/ai|enter|imes|ober|ufer/g, match => substituicoes[match]);
+    let textoDescriptografado = textoDesencriptar.replace(/ai|enter|imes|ober|ufat/g, match => substituicoes[match]);
 
     var botaoQuadro = document.getElementById('quadro-botao');
     var organizaQuadro = document.getElementsByClassName('principal__quadro')
