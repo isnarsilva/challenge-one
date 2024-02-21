@@ -85,7 +85,7 @@ body {
     top: 0;
     left: 0;
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem 1rem ;
 }
 
 #quadro-imagem {
@@ -184,6 +184,20 @@ body {
     color: #000000;
 }
 
+.imagem_MsgErro {
+    display: none;
+    width: 30%;
+    padding-top: 10rem;
+}
+
+.mensagemErro {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 2rem 2rem;
+}
+
 @media screen and (max-width: 768px) {
     body {
         margin: 1rem;
@@ -239,6 +253,11 @@ body {
         padding: 0;
         width: 90%;
         height: 7vh;
+    }
+
+    .imagem_MsgErro {
+        width: 20%;
+        padding-top: 3rem;
     }
 }
 
